@@ -7,84 +7,45 @@
 <title>Jongman Lee</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Drafting palette: film, graphite, non-photo blue guide lines. */
-:root{--film:#f1f3f2;--graphite:#2f3236;--grey:#6b7177;--guide:#a8d5e2;--link:#1c5b73}
+:root{--paper:#fcfcfb;--ink:#222;--grey:#6c7075;--faint:#8e9297;--link:#2b4c7e}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--film);color:var(--graphite);font-family:Archivo,'Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.55;font-variation-settings:'wdth' 100}
-a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Schibsted Grotesk','Helvetica Neue',Arial,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--link);text-decoration:underline;text-decoration-color:rgba(43,76,126,.35);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+a:focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:2px}
+.page{max-width:760px;margin:0 auto;padding:96px 24px 56px}
 
-.sheet{position:relative;max-width:1120px;margin:0 auto;padding:0 32px 64px}
-
-/* Structural grid: axes A–E mark the four columns the content sits on. */
-.axes{position:absolute;inset:0 32px;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none}
-.axis{position:relative;border-left:1px solid var(--guide);transform-origin:top;animation:draw 1.1s cubic-bezier(.3,.6,.2,1) both}
-.axis:last-child{border-right:1px solid var(--guide)}
-.axis:nth-child(2){animation-delay:.08s}.axis:nth-child(3){animation-delay:.16s}.axis:nth-child(4){animation-delay:.24s}
-.bubble{position:absolute;top:28px;left:-14px;width:28px;height:28px;border:1px solid var(--guide);border-radius:50%;background:var(--film);color:#5f97a9;font-size:12px;display:grid;place-items:center}
-.axis:last-child .bubble.end{left:auto;right:-14px}
-@keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-
-.row{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
-.row>*{margin:0 20px}
-/* Text breaks the guide lines it crosses, as lettering does on a drawing. */
-.sub,.links,h2,.body,footer p{justify-self:start;background:var(--film);padding-right:10px;box-shadow:-6px 0 0 var(--film)}
-
-header.row{padding-top:120px}
-h1{grid-column:1/-1;margin:0;font-weight:640;font-variation-settings:'wdth' 125;font-size:clamp(44px,9.4vw,112px);line-height:.95;letter-spacing:-.025em}
-.sub{grid-column:1/3;margin-top:28px;margin-bottom:0;font-size:20px;font-variation-settings:'wdth' 112}
-.links{grid-column:3/5;margin-top:28px;margin-bottom:0;padding-left:0;list-style:none;display:flex;flex-wrap:wrap;gap:4px 28px;font-size:17px;align-self:end}
+h1{font-size:34px;line-height:1.2;font-weight:600;letter-spacing:-.02em;margin:0}
+.sub{margin:4px 0 0;color:var(--grey);font-size:19px}
+.links{margin:22px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:4px 24px}
 .links li[hidden]{display:none}
 
-section.row{margin-top:104px}
-h2{grid-column:1;margin:0;font-size:17px;font-weight:600;font-variation-settings:'wdth' 112}
-.body{grid-column:2/5;max-width:62ch}
+section{display:grid;grid-template-columns:160px 1fr;gap:24px;margin-top:72px}
+h2{font-size:17px;font-weight:500;margin:0}
+.body{max-width:64ch}
 .body p{margin:0}
-dl{margin:0;display:grid;grid-template-columns:9em 1fr;gap:10px 0}
-dt{color:var(--grey)}
+dl{margin:0;display:grid;grid-template-columns:7.5em 1fr;gap:8px 16px}
+dt{color:var(--faint)}
 dd{margin:0}
 .note{color:var(--grey)}
 
-footer.row{margin-top:128px;font-size:14px;color:var(--grey)}
-footer p{grid-column:2/5;margin-top:0;margin-bottom:0}
+footer{margin-top:112px;font-size:14px;color:var(--faint)}
 
-@media(max-width:720px){
-  .sheet{padding:0 20px 48px}
-  .axes{inset:0 20px;grid-template-columns:1fr}
-  .axis:not(:first-child){display:none}
-  .axis:first-child{border-right:none}
-  .bubble{top:20px}
-  .row{grid-template-columns:1fr}
-  .row>*{margin:0 0 0 18px}
-  header.row{padding-top:84px}
-  h1{font-size:clamp(44px,15vw,76px)}
-  .sub,.links,h2,.body,footer p{grid-column:1}
-  .sub{margin-top:20px}
-  .links{margin-top:12px}
-  section.row{margin-top:64px}
-  section.row>h2{margin-bottom:10px}
-  dl{grid-template-columns:1fr;gap:0}
-  dd+dt{margin-top:12px}
-  footer.row{margin-top:88px}
+@media(max-width:600px){
+  .page{padding:56px 20px 40px}
+  h1{font-size:30px}
+  section{grid-template-columns:1fr;gap:10px;margin-top:52px}
+  footer{margin-top:80px}
 }
-@media(prefers-reduced-motion:reduce){.axis{animation:none}}
-@media print{body{background:#fff}.axes{display:none}}
+@media print{body{background:#fff}.page{padding:0}}
 </style>
 </head>
 <body>
-<div class="sheet">
-<div class="axes" aria-hidden="true">
-<div class="axis"><span class="bubble">A</span></div>
-<div class="axis"><span class="bubble">B</span></div>
-<div class="axis"><span class="bubble">C</span></div>
-<div class="axis"><span class="bubble">D</span><span class="bubble end">E</span></div>
-</div>
-
-<header class="row">
+<div class="page">
+<header>
 <h1>Jongman Lee</h1>
 <p class="sub">Ph.D. in Architecture</p>
 <ul class="links">
@@ -96,7 +57,7 @@ footer p{grid-column:2/5;margin-top:0;margin-bottom:0}
 </header>
 
 <main>
-<section class="row" id="background" aria-labelledby="background-heading">
+<section id="background" aria-labelledby="background-heading">
 <h2 id="background-heading">Background</h2>
 <div class="body">
 <dl>
@@ -108,7 +69,7 @@ footer p{grid-column:2/5;margin-top:0;margin-bottom:0}
 </div>
 </section>
 
-<section class="row" id="publications" aria-labelledby="publications-heading">
+<section id="publications" aria-labelledby="publications-heading">
 <h2 id="publications-heading">Publications</h2>
 <div class="body">
 <p class="note">Selected papers will be listed here. The full record is on <a href="https://scholar.google.com/citations?user=6kWZvs4AAAAJ&amp;hl=en">Google Scholar</a>.</p>
@@ -116,7 +77,7 @@ footer p{grid-column:2/5;margin-top:0;margin-bottom:0}
 </div>
 </section>
 
-<section class="row" id="projects" aria-labelledby="projects-heading">
+<section id="projects" aria-labelledby="projects-heading">
 <h2 id="projects-heading">Projects</h2>
 <div class="body">
 <p class="note">Being compiled.</p>
@@ -124,7 +85,7 @@ footer p{grid-column:2/5;margin-top:0;margin-bottom:0}
 </section>
 </main>
 
-<footer class="row"><p>Last updated October 2026</p></footer>
+<footer>Last updated October 2026</footer>
 </div>
 <script>
 // Profile links. Blank values are hidden.
