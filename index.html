@@ -3,74 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Jongman Lee — personal website. Background, publications, and projects.">
+<meta name="description" content="Jongman Lee, Ph.D. in Architecture.">
 <title>Jongman Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#faf9f6;--ink:#292c29;--muted:#656961;--line:#dedfd7;--accent:#315a48}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}a{color:var(--accent);text-underline-offset:5px;text-decoration-thickness:1px}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}.skip{position:absolute;left:20px;top:-80px;background:var(--paper);padding:8px}.skip:focus{top:10px}.page{max-width:1040px;margin:auto;padding:0 64px}header{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:38px 0;border-bottom:1px solid var(--line)}.brand{font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:-.3px}nav{display:flex;gap:27px}nav a{font-size:13px;text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}main{padding-top:91px}.intro{display:grid;grid-template-columns:190px 1fr;column-gap:48px;padding-bottom:79px}.eyebrow{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:13px 0 0}.intro h1{font-family:Georgia,'Times New Roman',serif;font-size:58px;line-height:1.12;font-weight:400;letter-spacing:-2.5px;margin:0 0 26px}.intro p.description{font-size:17px;line-height:1.85;max-width:460px;margin:0;color:var(--muted)}.jump{display:inline-block;font-size:13px;margin-top:28px}section.content{display:grid;grid-template-columns:190px 1fr;gap:48px;padding:39px 0 44px;border-top:1px solid var(--line);scroll-margin-top:26px}h2{font-size:15px;font-weight:600;letter-spacing:-.2px;margin:0}h2 span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:400;letter-spacing:1px}.section-body p{margin:0}.empty-title{font-size:15px;color:var(--ink)}.empty-note{color:var(--muted);font-size:13px;margin-top:8px!important;max-width:440px}.status{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;letter-spacing:.2px;margin-top:20px}.status::before{content:'';width:5px;height:5px;border-radius:50%;background:#8b9083}footer{border-top:1px solid var(--line);margin-top:65px;padding:25px 0 36px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}footer a{color:var(--muted);text-decoration:none}.entry+.entry{margin-top:26px}.entry h3{font-size:16px;margin:0 0 5px;font-weight:500}.entry .meta{font-size:13px;color:var(--muted)}.entry .links{display:flex;gap:16px;font-size:12px;margin-top:9px}
-@media(min-width:1200px){.page{max-width:1060px}main{padding-top:104px}}
-@media(max-width:700px){.page{padding:0 26px}header{padding:25px 0;align-items:flex-start;gap:18px;flex-direction:column}nav{gap:24px;flex-wrap:wrap}main{padding-top:50px}.intro{display:block;padding-bottom:49px}.eyebrow{margin:0 0 20px}.intro h1{font-size:47px;letter-spacing:-1.7px;margin-bottom:21px}.intro p.description{font-size:16px}section.content{grid-template-columns:1fr;gap:22px;padding:28px 0 32px}h2 span{display:inline;margin-left:12px;font-size:10px}footer{margin-top:39px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{body{background:white}.page{padding:0}header,footer,.jump{display:none}main{padding-top:0}.intro{padding-bottom:35px}section.content{break-inside:avoid}}
-.profile-links{display:flex;flex-wrap:wrap;gap:12px 23px;margin-top:25px;align-items:center}.profile-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;text-decoration:none;min-height:36px;color:var(--accent)}.profile-link svg{width:17px;height:17px;flex-shrink:0}.profile-link[aria-disabled="true"]{color:var(--muted);cursor:default}.profile-link[aria-disabled="true"]:hover{text-decoration:none}.link-note{font-size:11px;color:var(--muted);margin:4px 0 0}
+:root{--paper:#f7f5f0;--ink:#1f1d1a;--muted:#6f6a62;--rule:#cfc9bd;--accent:#8c3b22}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.6;font-optical-sizing:auto}
+a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.page{max-width:720px;margin:0 auto;padding:72px 24px 48px}
+h1{font-size:40px;line-height:1.15;font-weight:600;letter-spacing:-.01em;margin:0}
+.sub{margin:6px 0 0;color:var(--muted);font-style:italic}
+.links{margin:20px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:4px 0;font-size:16px}
+.links li:not([hidden]) ~ li::before{content:'/';color:var(--rule);margin:0 12px}
+.links li[hidden]{display:none}
+section{display:grid;grid-template-columns:150px 1fr;gap:24px;margin-top:56px;padding-top:14px;border-top:1px solid var(--ink)}
+h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:4px 0 0}
+section p{margin:0}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 20px}
+dt{color:var(--muted)}
+dd{margin:0}
+.note{color:var(--muted)}
+footer{margin-top:80px;font-size:14px;color:var(--muted)}
+@media(max-width:600px){
+  body{font-size:17px}
+  .page{padding:44px 20px 36px}
+  h1{font-size:32px}
+  section{grid-template-columns:1fr;gap:10px;margin-top:40px}
+  dl{grid-template-columns:1fr;gap:0}
+  dd+dt{margin-top:10px}
+}
+@media print{body{background:#fff}.page{padding:0}}
 </style>
 </head>
-<body id="top">
-<a class="skip" href="#main">Skip to content</a>
+<body>
 <div class="page">
-<header><a class="brand" href="#top">Jongman Lee</a><nav aria-label="Main navigation"><a href="#background">Background</a><a href="#publications">Publications</a><a href="#projects">Projects</a></nav></header>
-<main id="main">
-<div class="intro"><p class="eyebrow">Personal website</p><div><h1>Jongman Lee</h1><p class="description">A place for my background, publications,<br class="wide"> and projects.</p><div class="profile-links" aria-label="External profiles">
-<a class="profile-link" data-profile="scholar" aria-disabled="true" title="Profile URL not yet added"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9 12 4l10 5-10 5L2 9Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v8"/></svg>Google Scholar</a>
-<a class="profile-link" data-profile="linkedin" aria-disabled="true" title="Profile URL not yet added"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="8" r="1.3"/><path d="M6 11h2v7H6zm5 0h2v1c1-2 5-2 5 2v4h-2v-4c0-2-3-2-3 0v4h-2z"/></svg>LinkedIn</a>
-<a class="profile-link" data-profile="other" aria-disabled="true" title="External URL not yet added"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m10 13 4-4m-6 6-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 2 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 1)"/></svg><span id="other-label">Elsewhere</span></a>
-<a class="profile-link" id="email-link" aria-disabled="true" title="Email address not yet added"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
-</div><p class="link-note" id="link-note">Profile links will be added soon.</p>
-<a class="jump" href="#background">Explore below <span aria-hidden="true">↓</span></a></div></div>
-<!-- Replace the empty states below with your actual information. No affiliation or field has been assumed. -->
-<section class="content" id="background" aria-labelledby="background-heading"><h2 id="background-heading">Background<span>01</span></h2><div class="section-body">
-<article class="entry"><p class="meta">Education</p><h3>Ph.D. in Architecture</h3><!-- Add institution and year here, e.g. <p class="meta">University name, 20XX</p> --></article>
-<article class="entry"><p class="meta">Experience</p><p class="empty-note">Being organized and will be added soon.</p><span class="status">To be added</span><!-- Add real experience entries here. Add a CV link only when the file is available. --></article>
-</div></section>
-<section class="content" id="publications" aria-labelledby="publications-heading"><h2 id="publications-heading">Publications<span>02</span></h2><div class="section-body"><p class="empty-title">Publication list coming soon.</p><p class="empty-note">Papers, author details, and links to the full text will appear here.</p><span class="status">To be added</span><!-- Suggested entry: article.entry > h3 (paper title), p.meta (authors, venue, year), div.links (real PDF and code URLs). --></div></section>
-<section class="content" id="projects" aria-labelledby="projects-heading"><h2 id="projects-heading">Projects<span>03</span></h2><div class="section-body"><p class="empty-title">Project notes coming soon.</p><p class="empty-note">Short descriptions of my work, with code and demos where available.</p><span class="status">To be added</span><!-- Add verified project descriptions, personal contributions, and real repository or demo URLs here. --></div></section>
+<header>
+<h1>Jongman Lee</h1>
+<p class="sub">Ph.D. in Architecture</p>
+<ul class="links">
+<li data-profile="scholar" hidden><a>Google Scholar</a></li>
+<li data-profile="linkedin" hidden><a>LinkedIn</a></li>
+<li data-profile="other" hidden><a></a></li>
+<li data-profile="email" hidden><a>Email</a></li>
+</ul>
+</header>
+<main>
+<section id="background" aria-labelledby="background-heading">
+<h2 id="background-heading">Background</h2>
+<dl>
+<dt>Education</dt>
+<dd>Ph.D. in Architecture<!-- Add institution and year, e.g. ", University name, 20XX" --></dd>
+<dt>Experience</dt>
+<dd class="note">In preparation.<!-- Add experience entries here. --></dd>
+</dl>
+</section>
+<section id="publications" aria-labelledby="publications-heading">
+<h2 id="publications-heading">Publications</h2>
+<p class="note">A selected list will be added here. For now, see <a href="https://scholar.google.com/citations?user=6kWZvs4AAAAJ&amp;hl=en">Google Scholar</a>.</p>
+<!-- Entry format: <p>Authors. "Title." <i>Venue</i>, Year. <a href="...">PDF</a></p> -->
+</section>
+<section id="projects" aria-labelledby="projects-heading">
+<h2 id="projects-heading">Projects</h2>
+<p class="note">In preparation.</p>
+</section>
 </main>
-<footer><span>Jongman Lee</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+<footer>Last updated October 2026</footer>
 </div>
 <script>
-// Enter your actual profile URLs here. Blank URLs remain visibly inactive.
-// The third link can be a GitHub profile, lab website, blog, or another destination.
+// Profile links. Blank values are hidden.
 const profileLinks = {
   scholar: 'https://scholar.google.com/citations?user=6kWZvs4AAAAJ&hl=en',
   linkedin: 'https://www.linkedin.com/in/jongman-lee-956252390/',
-  email: '', // Add your email address here later (without mailto:).
+  email: '', // e.g. name@example.com (without mailto:)
   other: '',
-  otherLabel: 'Elsewhere'
+  otherLabel: 'GitHub'
 };
-document.getElementById('other-label').textContent = profileLinks.otherLabel;
-let activeLinks = 0;
-document.querySelectorAll('[data-profile]').forEach(link => {
-  const value = profileLinks[link.dataset.profile];
+document.querySelectorAll('[data-profile]').forEach(li => {
+  const key = li.dataset.profile;
+  const value = (profileLinks[key] || '').trim();
+  const a = li.querySelector('a');
   if (!value) return;
-  try {
-    const url = new URL(value);
-    if (url.protocol !== 'https:' && url.protocol !== 'http:') return;
-    link.href = url.href;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.removeAttribute('aria-disabled');
-    link.title = 'Opens in a new tab';
-    activeLinks++;
-  } catch (_) { /* Invalid URLs remain inactive. */ }
+  if (key === 'email') {
+    if (!/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(value)) return;
+    a.href = 'mailto:' + value;
+  } else {
+    try {
+      const url = new URL(value);
+      if (url.protocol !== 'https:' && url.protocol !== 'http:') return;
+      a.href = url.href;
+    } catch (_) { return; }
+    if (key === 'other') a.textContent = profileLinks.otherLabel;
+  }
+  li.hidden = false;
 });
-if (activeLinks) document.getElementById('link-note').hidden = true;
-const email = profileLinks.email.trim();
-if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && !/[?&#]/.test(email)) {
-  const emailLink = document.getElementById('email-link');
-  emailLink.href = 'mailto:' + email;
-  emailLink.removeAttribute('aria-disabled');
-  emailLink.title = 'Email ' + email;
-}
 </script>
 </body>
 </html>
